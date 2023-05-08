@@ -1,0 +1,8 @@
+out
+pack
+lib
+node_modules
+*.vsix
+*.lock
+!yarn.lock
+yarn-error.log
