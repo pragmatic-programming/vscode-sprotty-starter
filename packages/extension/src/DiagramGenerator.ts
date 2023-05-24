@@ -3,7 +3,7 @@ import { IDiagramGenerator } from "sprotty-protocol/lib/diagram-services";
 
 export class DiagramGenerator implements IDiagramGenerator {
 
-    protected idCounter: number = 0;
+    protected idCounter = 0;
 
     generate(): SModelRoot | Promise<SModelRoot> {
         return this.graph(

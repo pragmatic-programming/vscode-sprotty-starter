@@ -4,7 +4,7 @@ import { DefaultElementFilter, ElkLayoutEngine } from "sprotty-elk/lib/elk-layou
 import ElkConstructor from "elkjs/lib/elk.bundled";
 import { DiagramGenerator } from "./DiagramGenerator";
 
-export function activate(context: vscode.ExtensionContext) {
+export function activate(context: vscode.ExtensionContext): void {
 
     console.log("Congratulations, your extension is now active!");
 
@@ -18,5 +18,6 @@ export function activate(context: vscode.ExtensionContext) {
     );
 }
 
-export function deactivate() {
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+export function deactivate(): void {
 }

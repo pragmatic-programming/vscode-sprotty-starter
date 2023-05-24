@@ -28,10 +28,11 @@ export class DiagramExtension extends SprottyVscodeExtension {
         return webview;
     }
 
-    protected connectWebViewWithDiagramServer(webview: SprottyWebview) {
+    protected connectWebViewWithDiagramServer(webview: SprottyWebview): void {
         const diagramServer = new DiagramServer(
-            async <A extends Action>(action: A) => {
-                await webview.dispatch(action);
+            <A extends Action>(action: A): Promise<void> => {
+                webview.dispatch(action);
+                return Promise.resolve();
             },
             this.diagramServices()
         );
@@ -40,12 +41,14 @@ export class DiagramExtension extends SprottyVscodeExtension {
 
     protected diagramServices(): DiagramServices {
         return {
+            // eslint-disable-next-line @typescript-eslint/naming-convention
             DiagramGenerator: this.diagramGenerator,
+            // eslint-disable-next-line @typescript-eslint/naming-convention
             ModelLayoutEngine: this.layoutEngine,
         };
     }
 
-    protected registerActionHandlers(webview: SprottyWebview, diagramServer: DiagramServer) {
+    protected registerActionHandlers(webview: SprottyWebview, diagramServer: DiagramServer): void {
         // every action which is sent by the webView (client) and should be handled by the diagramServer (server)
         // requires a custom ActionHandler that extends the AbstractWebViewActionHandler
         webview.actionHandlers.set(RequestModelAction.KIND, new RequestModelActionHandler(diagramServer));

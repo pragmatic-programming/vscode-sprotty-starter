@@ -20,13 +20,14 @@ import {
     SGraphView,
     SLabel,
     SLabelView,
-    SNode
+    SNode,
+    ViewerOptions
 } from "sprotty";
 import { EdgeView } from "./view/EdgeView";
 
 export class StatesSprottyStarter extends SprottyLspEditStarter {
 
-    createContainer(diagramIdentifier: SprottyDiagramIdentifier) {
+    createContainer(diagramIdentifier: SprottyDiagramIdentifier): Container {
         return this.createStateDiagramContainer(diagramIdentifier.clientId);
     }
 
@@ -42,7 +43,7 @@ export class StatesSprottyStarter extends SprottyLspEditStarter {
         return container;
     }
 
-    protected createViewerOptions(widgetId: string) {
+    protected createViewerOptions(widgetId: string): Partial<ViewerOptions> {
         return {
             baseDiv: widgetId,
             hiddenDiv: widgetId + "_hidden",
@@ -51,7 +52,7 @@ export class StatesSprottyStarter extends SprottyLspEditStarter {
         };
     }
 
-    protected createContainerModule() {
+    protected createContainerModule(): ContainerModule {
         return new ContainerModule(
             (bind, unbind, isBound, rebind) => {
                 const context = {bind, unbind, isBound, rebind};
