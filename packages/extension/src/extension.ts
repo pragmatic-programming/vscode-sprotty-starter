@@ -1,21 +1,26 @@
 import * as vscode from "vscode";
-import { DiagramExtension } from "./DiagramExtension";
 import { DefaultElementFilter, ElkLayoutEngine } from "sprotty-elk/lib/elk-layout";
 import ElkConstructor from "elkjs/lib/elk.bundled";
-import { DiagramGenerator } from "./DiagramGenerator";
+import { WebView } from "./WebView";
+import { registerDefaultCommands } from "sprotty-vscode";
 
 export function activate(context: vscode.ExtensionContext): void {
 
     console.log("Congratulations, your extension is now active!");
 
-    new DiagramExtension(
+    const webviewPanelManager = new WebView({
+            extensionUri: context.extensionUri,
+            defaultDiagramType: "sprotty-starter",
+            supportedFileExtensions: [".txt"],
+            singleton: true
+        },
         context,
-        new ElkLayoutEngine(
+        () => new ElkLayoutEngine(
             () => new ElkConstructor({algorithms: ["layered"]}),
             new DefaultElementFilter(),
         ),
-        new DiagramGenerator()
     );
+    registerDefaultCommands(webviewPanelManager, context, {extensionPrefix: "sprotty-starter"});
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
