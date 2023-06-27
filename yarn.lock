@@ -528,11 +528,6 @@
   resolved "https://registry.yarnpkg.com/@types/vscode/-/vscode-1.77.0.tgz#f92f15a636abc9ef562f44dd8af6766aefedb445"
   integrity sha512-MWFN5R7a33n8eJZJmdVlifjig3LWUNRrPeO1xemIcZ0ae0TEQuRc7G2xV0LUX78RZFECY1plYBn+dP/Acc3L0Q==
 
-"@vscode/codicons@^0.0.25":
-  version "0.0.25"
-  resolved "https://registry.yarnpkg.com/@vscode/codicons/-/codicons-0.0.25.tgz#4ebc3e2c9e707ac46aea0becceda79f7738c647c"
-  integrity sha512-uqPhTdADjwoCh5Ufbv0M6TZiiP2mqbfJVB4grhVx1k+YeP03LDMOHBWPsNwGKn4/0S5Mq9o1w1GeftvR031Gzg==
-
 "@webassemblyjs/ast@1.11.5", "@webassemblyjs/ast@^1.11.5":
   version "1.11.5"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.11.5.tgz#6e818036b94548c1fb53b754b5cae3c9b208281c"
@@ -879,10 +874,10 @@ asynckit@^0.4.0:
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==
 
-autocompleter@^5.1.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/autocompleter/-/autocompleter-5.2.0.tgz#9ed3df262614fd557bf4d5bf67ab13cdee008203"
-  integrity sha512-CMYgI+r7RGZFaT0SvXcyBn1hb/Ne6XbjXimWQPc16LcwZgUGFBHg/Pv8honrwkTZE4DbfrD/MzqlG+Bn2u+1ng==
+autocompleter@^7.0.1:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/autocompleter/-/autocompleter-7.1.0.tgz#f8ff1428ec976eddc3eb8df7a2842c287d9b2bf5"
+  integrity sha512-uCToOnq7eAD/GJAteDbYuQ7ksDtrYWOy5CIAq43wh0dT+5frMpPlyD9tp+y5fz8KIcsP+zR2MjzoTAdW5aJESw==
 
 axios@^1.0.0:
   version "1.4.0"
@@ -1485,10 +1480,10 @@ electron-to-chromium@^1.4.284:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.380.tgz#195dc59d930c6b74efbee6f0e6a267ce4af5ed91"
   integrity sha512-XKGdI4pWM78eLH2cbXJHiBnWUwFSzZM7XujsB6stDiGu9AeSqziedP6amNLpJzE3i0rLTcfAwdCTs5ecP5yeSg==
 
-elkjs@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/elkjs/-/elkjs-0.7.1.tgz#4751c5e918a4988139baf7f214e010aea22de969"
-  integrity sha512-lD86RWdh480/UuRoHhRcnv2IMkIcK6yMDEuT8TPBIbO3db4HfnVF+1lgYdQi99Ck0yb+lg5Eb46JCHI5uOsmAw==
+elkjs@^0.8.2:
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/elkjs/-/elkjs-0.8.2.tgz#c37763c5a3e24e042e318455e0147c912a7c248e"
+  integrity sha512-L6uRgvZTH+4OF5NE/MBbzQx/WYpru1xCBE9respNj6qznEewGUIfhzmm7horWWxbNO2M0WckQypGctR8lH79xQ==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -1709,7 +1704,7 @@ file-loader@^6.2.0:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
 
-file-saver@^2.0.2:
+file-saver@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/file-saver/-/file-saver-2.0.5.tgz#d61cfe2ce059f414d899e9dd6d4107ee25670c38"
   integrity sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==
@@ -4034,7 +4029,7 @@ snabbdom-to-html@^7.1.0:
     object-assign "^4.1.0"
     parse-sel "^1.0.0"
 
-snabbdom@^3.0.3:
+snabbdom@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/snabbdom/-/snabbdom-3.5.1.tgz#25f80ef15b194baea703d9d5441892e369de18e1"
   integrity sha512-wHMNIOjkm/YNE5EM3RCbr/+DVgPg6AqQAX1eOxO46zYNvCXjKP5Y865tqQj3EXnaMBjkxmQA5jFuDpDK/dbfiA==
@@ -4135,59 +4130,60 @@ sprintf-js@~1.0.2:
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   integrity sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==
 
-sprotty-elk@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/sprotty-elk/-/sprotty-elk-0.12.0.tgz#2f2a164d1637209026954848217b6c717285e513"
-  integrity sha512-7mrQRiG3mSo4+oQLd9huM8FEW18e4ZwA3rt+dtVj9yHDcVfjWGSraLmWBu3qc4lia94X1sR2UcecURzxQQxKgg==
+sprotty-elk@^0.13.0:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/sprotty-elk/-/sprotty-elk-0.13.1.tgz#d7b46e359b4e9be2bdc3e9f55c152163e015e685"
+  integrity sha512-k3C9BWI5Nc7btbgtqX8Ab2pPBTLUTV6bglvpUANieFGNWQpfGInfTp7RCzA3143lsLxyoApoN/CvyozSm3+qaw==
   dependencies:
-    elkjs "^0.7.1"
-    sprotty-protocol "~0.12.0"
+    elkjs "^0.8.2"
+    sprotty-protocol "^0.13.0"
   optionalDependencies:
     inversify "^5.1.1"
 
-sprotty-protocol@~0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/sprotty-protocol/-/sprotty-protocol-0.12.0.tgz#542eb6396a645f85f8cfc2e7ef1d9b90c7b1980b"
-  integrity sha512-vbov+XfbmSeMYb46vm6dJvK3q7YKUvg0q7JnM6H7Ca5qY8TaZCEZ5Vc8zHKFZGWchcwnQYKqLTzwDItsMikD0A==
+sprotty-protocol@^0.13.0, sprotty-protocol@~0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/sprotty-protocol/-/sprotty-protocol-0.13.0.tgz#ccd04a65b66f324bd847b8f55783f9fcd3df8129"
+  integrity sha512-yOaah3BNDwso6gS1yo/ceh+g/KOHeWLbajGiiyz9ngWLV4UUyP9VOWXN8jFI57k/0iAF5qhHTI7nkAeTqHFdLA==
 
-sprotty-vscode-protocol@^0.4.0, sprotty-vscode-protocol@~0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/sprotty-vscode-protocol/-/sprotty-vscode-protocol-0.4.0.tgz#6129f1b477dc25a282b33eeb4c83740ce3740cf3"
-  integrity sha512-0PH30nzwwVjabC96n8n+KmuIxpdP1L6KwHhwZ3rYA8eM7YzSznDZdt8QCmPZU+qb00gS9RI5yEKoiKc4FtvEQg==
+sprotty-vscode-protocol@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/sprotty-vscode-protocol/-/sprotty-vscode-protocol-0.5.0.tgz#b31ac12fdfa4fe6ee0d00a76154a181f1527e66b"
+  integrity sha512-ynAA1AOZ1eNp0XTPD2y/RKE2BlrjZOraGOohdxshdC71iw/kPP65VKskMYhBn/SQsT6EiGVxwdQKCfltB0JOPQ==
   dependencies:
-    path "^0.12.7"
-    sprotty-protocol "~0.12.0"
+    sprotty-protocol "~0.13.0"
     vscode-languageserver-protocol "^3.17.2"
+    vscode-messenger-common "^0.4.3"
 
-sprotty-vscode-webview@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/sprotty-vscode-webview/-/sprotty-vscode-webview-0.4.0.tgz#2dcef17c52bc3b0ee434985345b222d9fde81f1c"
-  integrity sha512-J/dKdNwnCT9CSJJ1wvhsIsaoqaIHXEuhjJmd67G2UP/UIUc2ZuVo/QEgZjONRydoEdZAJUc0WpvytD1QfapPbw==
+sprotty-vscode-webview@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/sprotty-vscode-webview/-/sprotty-vscode-webview-0.5.0.tgz#253c2ce7c82ea889cbc84ae375bd97d40cca2130"
+  integrity sha512-5PfJ7RhAMnEzYh7RCmwMeTG8Go/xrRTmxoMKq1jlUKf3+oB/X7hDVeNCLkZ4JC/voH6D4vNFEUQKM4wIUq6hKQ==
   dependencies:
-    sprotty "~0.12.0"
-    sprotty-vscode-protocol "~0.4.0"
+    sprotty "~0.13.0"
+    sprotty-vscode-protocol "^0.5.0"
+    vscode-messenger-webview "^0.4.3"
     vscode-uri "^3.0.6"
 
-sprotty-vscode@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/sprotty-vscode/-/sprotty-vscode-0.4.0.tgz#f185b041bd55ff75d1ab9dd927dd4bbf90a456eb"
-  integrity sha512-pXL0Bzfn+Q7h+Tg5M+bINuRDw7C3p/PPfjGwcYlqibiZPHoX0/nVkyK3RQ/FsG8Crh0zKMTRz/sgVmUvkXXTEg==
+sprotty-vscode@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/sprotty-vscode/-/sprotty-vscode-0.5.0.tgz#708270418b19e5332ce9e23c40fcb59aab012f2c"
+  integrity sha512-in8bnv0IVt3NWAEIqAaZig5N7dV8z05eoeNaDYFveRyupVqNIlB4ZJblCdrwxjuHZ2wnPWVsf+uJEtXb5+ENKg==
   dependencies:
     path "^0.12.7"
-    sprotty-vscode-protocol "~0.4.0"
+    sprotty-vscode-protocol "^0.5.0"
     vscode-languageclient "^8.0.2"
+    vscode-messenger "^0.4.4"
 
-sprotty@^0.12.0, sprotty@~0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/sprotty/-/sprotty-0.12.0.tgz#693432346d9321bb19f368c6806641539962db99"
-  integrity sha512-0RjRn3iR9McDt+LZ+cyySfdBdWyzR4kPbg4xESumvoSPziHphs6TdM7CvJ9ywTMmG131nKUF6GgbzhQZ+L6cGg==
+sprotty@^0.13.0, sprotty@~0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/sprotty/-/sprotty-0.13.0.tgz#d704211a8fbdecf4c82ece1b276ad83b06a4e8ec"
+  integrity sha512-XA5GV1IhdqBcdQn14qXUy9vQ/cDe/az6+gANOIA+LWrI+5iYH8hoEwbkXILJnWyV/a9T/66IP9sEQ8U0g90o0Q==
   dependencies:
-    "@vscode/codicons" "^0.0.25"
-    autocompleter "^5.1.0"
-    file-saver "^2.0.2"
+    autocompleter "^7.0.1"
+    file-saver "^2.0.5"
     inversify "^5.1.1"
-    snabbdom "^3.0.3"
-    sprotty-protocol "~0.12.0"
+    snabbdom "^3.5.1"
+    sprotty-protocol "^0.13.0"
     tinyqueue "^2.0.3"
 
 ssri@^10.0.0, ssri@^10.0.1:
@@ -4640,6 +4636,25 @@ vscode-languageserver-types@3.17.3:
   version "3.17.3"
   resolved "https://registry.yarnpkg.com/vscode-languageserver-types/-/vscode-languageserver-types-3.17.3.tgz#72d05e47b73be93acb84d6e311b5786390f13f64"
   integrity sha512-SYU4z1dL0PyIMd4Vj8YOqFvHu7Hz/enbWtpfnVbJHU4Nd1YNYx8u0ennumc6h48GQNeOLxmwySmnADouT/AuZA==
+
+vscode-messenger-common@^0.4.3, vscode-messenger-common@^0.4.5:
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/vscode-messenger-common/-/vscode-messenger-common-0.4.5.tgz#bc49a25d28808db9cc322cde029fed518c8fa382"
+  integrity sha512-opA+BEYTWdy1fFC3oOw30b0zc/KEuMtw+1pOiH5fEp+BGeA5xff7omSQTZeZJSDJszM471Vi+YY/ipRdRglAlQ==
+
+vscode-messenger-webview@^0.4.3:
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/vscode-messenger-webview/-/vscode-messenger-webview-0.4.5.tgz#89767aee50038acb6a706f5427e0fc72d5aec7f5"
+  integrity sha512-pzGB6HoTfPszMF4HQG+u5WMJ959iGLmow6ehYVTZnZjZ+phBKEBtpTYAjJSNotyUfZJ58NCdq5+ZSvMgkAuAJw==
+  dependencies:
+    vscode-messenger-common "^0.4.5"
+
+vscode-messenger@^0.4.4:
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/vscode-messenger/-/vscode-messenger-0.4.5.tgz#decf7475568ce3a3912479c29ff1e6eac61c7470"
+  integrity sha512-a6e54dpPRi/ITmVex49LGU6YXlqcuxGPlDPauvZig20G1D1/QD2E8GfhtvlTj3ml5aU/QV3LHghyepq3riy7sw==
+  dependencies:
+    vscode-messenger-common "^0.4.5"
 
 vscode-uri@^3.0.6:
   version "3.0.7"
