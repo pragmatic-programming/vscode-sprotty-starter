@@ -45,7 +45,9 @@ export class WebView extends WebviewPanelManager {
 
     protected diagramServices(): DiagramServices {
         return {
+            // eslint-disable-next-line @typescript-eslint/naming-convention
             DiagramGenerator: new DiagramGenerator(),
+            // eslint-disable-next-line @typescript-eslint/naming-convention
             ModelLayoutEngine: this.layoutEngineFactory(),
         };
     }
@@ -59,7 +61,10 @@ export class WebView extends WebviewPanelManager {
 
     private connectEndpointWithDiagramServer(endpoint: WebviewEndpoint): void {
         const handler = async (action: Action): Promise<void> => {
-            return endpoint.diagramServer!.accept(action);
+            if (!endpoint.diagramServer) {
+                throw Error("DiagramServer not set");
+            }
+            return endpoint.diagramServer.accept(action);
         };
         endpoint.addActionHandler(ComputedBoundsAction.KIND, handler);
         endpoint.addActionHandler(RequestModelAction.KIND, handler);
