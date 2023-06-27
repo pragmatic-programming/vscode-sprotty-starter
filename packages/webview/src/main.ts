@@ -66,4 +66,4 @@ export class StatesSprottyStarter extends SprottyLspEditStarter {
     }
 }
 
-new StatesSprottyStarter();
+new StatesSprottyStarter().start();

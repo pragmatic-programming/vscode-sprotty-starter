@@ -3,13 +3,13 @@
   "version": "0.0.1",
   "license": "(EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0)",
   "dependencies": {
-    "sprotty-elk": "^0.12.0"
+    "sprotty-elk": "^0.13.0"
   },
   "devDependencies": {
     "@types/vscode": "^1.66.0",
     "shx": "^0.3.4",
-    "sprotty-vscode": "^0.4.0",
-    "sprotty-vscode-protocol": "^0.4.0",
+    "sprotty-vscode": "^0.5.0",
+    "sprotty-vscode-protocol": "^0.5.0",
     "ts-loader": "^9.2.8",
     "typescript": "^4.5.5",
     "webpack": "^5.70.0",
