@@ -4,7 +4,7 @@ import ElkConstructor from "elkjs/lib/elk.bundled";
 import { WebView } from "./WebView";
 import { registerDefaultCommands } from "sprotty-vscode";
 
-export function activate(context: vscode.ExtensionContext) {
+export function activate(context: vscode.ExtensionContext): void {
 
     console.log("Congratulations, your extension is now active!");
 
@@ -23,5 +23,6 @@ export function activate(context: vscode.ExtensionContext) {
     registerDefaultCommands(webviewPanelManager, context, {extensionPrefix: "sprotty-starter"});
 }
 
-export function deactivate() {
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+export function deactivate(): void {
 }

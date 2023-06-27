@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "lerna": "^7.1.0"
+  },
+  "scripts": {
+    "lint": "eslint ."
   }
 }
